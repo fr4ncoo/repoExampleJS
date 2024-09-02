@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+    <title>Veterinaria</title>
+</head>
+<body>
+    <h1>Sistema de administración de turnos veterinarios</h1>
+    <h2>¿Qué desea hacer?</h2>
+
+    <section class="botonera">
+        <div id="botonVerTurnos" class="boton">Ver turnos pre creados (json)</div>
+        <div id="botonCrearTurno" class="boton">Crear nuevo turno</div>
+        <div id="botonEliminarTurno" class="boton">Eliminar un turno creado</div>
+    </section>
+
+    <section id="sectionMuestra">
+    </section>
+
+    <section id="sectionCrear" style="display: none;">
+        <form id="formularioTurnoNuevo" class ="formulario">
+
+            <label for="nombreDelDuenio">Nombre del dueño:</label>
+            <input  class ="inputs" type="text" id="nombreDelDuenio" required>
+
+            <label for="nombreDeLaMascota">Nombre de tu mascota:</label>
+            <input  class ="inputs" type="text" id="nombreDeLaMascota" required>
+
+            <label for="tipoDeAnimal">Tu mascota es:</label>
+            <select id="tipoDeAnimal" class ="inputs">
+            <option value="">Seleccionar tipo de mascota</option>
+            <option value="Canino">Canino</option>
+            <option value="Felino">Felino</option>
+            <option value="Ave">Ave</option>
+            </select>  
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" class ="inputs"  required>
+            
+            <label for="motivoDeConsulta">Motivo de la consulta:</label>
+            <textarea id="motivoDeConsulta" class ="inputs" required></textarea>
+
+            <label for="fechaHora">Fecha y Hora de Preferencia:</label>
+            <input type="datetime-local" id="fechaHora" name="fechaHora" class ="inputs" required>
+
+            <button type="submit" class="botonCssCrearTurno">Crear turno</button>
+        </form>
+    </section>
+
+    <section id="sectionEliminar" style="display: none;">
+
+    </section>
+
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
+
+</body>
+</html>
